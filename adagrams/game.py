@@ -46,8 +46,18 @@ def draw_letters():
     return hand
 
 def uses_available_letters(word, letter_bank):
-    pass
-
+    letters = []
+    # check how many times this letter appears in letter_bank
+    for letter in letter_bank:
+        letters.append(letter)
+    # check how many times this letter appears in word
+    for letter in word:
+        letter = letter.upper()
+        if letter not in letters:
+            return False
+        letters.remove(letter)
+    return True
+    
 def score_word(word):
     pass
 
