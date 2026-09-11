@@ -109,12 +109,10 @@ def get_highest_word_score(word_list):
         if current_score > winning_score:
             winning_word = word
             winning_score = current_score
-    # if current score == winning score
-    # if current word has 10 letters:
-    # current word becomes winning word
-
-    # else if winning word is not 10 letters
-    # and current word has fewer letters:
-    # current word becomes winning word
-
-    # return winning word and winning score as a tuple
+        # check for tie
+        if current_score == winning_score:
+            if len(word) == 10 and len(winning_word) != 10:
+                winning_word = word
+            elif len(word) != 10 and len(winning_word) != 10 and len(word) < len(winning_word):
+                winning_word = word
+    return winning_word, winning_score
