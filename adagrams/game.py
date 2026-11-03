@@ -38,7 +38,7 @@ def draw_letters():
 
     hand = []
     # loop 10 times to get a hand of 10 letters
-    for i in range(10):
+    for _ in range(10):
         random_index = randint(0, len(letters) - 1)
         hand.append(letters[random_index])
         letters.pop(random_index)
