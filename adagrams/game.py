@@ -30,7 +30,6 @@ def draw_letters():
         'Z': 1
         }
     letters = []
-    # loop through alphabet dictionary by keys to get the number value 
     for letter in LETTER_POOL:
         count = LETTER_POOL[letter]
     # add each letter to the list based on the num value
