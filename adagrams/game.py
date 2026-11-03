@@ -32,9 +32,7 @@ def draw_letters():
     letters = []
     for letter in LETTER_POOL:
         count = LETTER_POOL[letter]
-    # add each letter to the list based on the num value
-        for i in range(count):
-            letters.append(letter)
+        letters.extend([letter] * count)
 
     hand = []
     # loop 10 times to get a hand of 10 letters
